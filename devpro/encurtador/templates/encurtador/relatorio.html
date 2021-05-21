@@ -77,12 +77,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {% for r in redirecionamentos_por_data %}
-                                    <tr title="QTD de Cliques em {{ r.data }}">
-                                        <td class="text-left">{{ r.data }}</td>
-                                        <td>{{ r.cliques }}</td>
-                                    </tr>
-                                {% endfor %}
+                                    {% for r in redirecionamentos_por_data %}
+                                        <tr title="QTD de Cliques em {{ r.data }}">
+                                            <td class="text-left">{{ r.data }}</td>
+                                            <td>{{ r.cliques }}</td>
+                                        </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
