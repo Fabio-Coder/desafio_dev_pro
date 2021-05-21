@@ -12,5 +12,11 @@ class UrlRedirect(models.Model):
     def __str__(self):
         return f'UrlRedirect para {self.destino}'
 
-class StatusInjetoras(models.Model):
-    equipamento = models.TextField()
+
+class UrlLog(models.Model):
+    #criado_em = models.DateTimeField(auto_now_add=True)
+    origem = models.DateTimeField(max_length=512, null=True, blank=True)
+    user_agent = models.DateTimeField(max_length=512, null=True, blank=True)
+    host = models.DateTimeField(max_length=512, null=True, blank=True)
+    ip = models.GenericIPAddressField(null=True, blank=True)
+    url_redirect = models.ForeignKey(UrlRedirect, models.DO_NOTHING, related_name='logs')
