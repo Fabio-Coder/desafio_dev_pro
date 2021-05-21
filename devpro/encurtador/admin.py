@@ -11,7 +11,6 @@ class UrlRedirect(admin.ModelAdmin):
 
 @admin.register(UrlLog)
 class UrlLogAdmin(admin.ModelAdmin):
-    list_display = ('origem', 'user_agent', 'host', 'ip', 'url_redirect')
+    list_display = ('origem', 'criado_em', 'user_agent', 'host', 'ip', 'url_redirect')
 
-    def has_change_permission(self, request, obj=None):
-        return False
+
